@@ -1,0 +1,274 @@
+/* istruzione per importare il font Garamond da Google */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap');
+
+body {
+    font-family: 'EB Garamond', serif;
+    margin: 0;
+    font-size: 17pt;
+}
+
+header {
+    background-color: white;
+    height: 8vh;
+    padding: 0 5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 5px 12px #c2c2c2;
+    /* le istruzioni seguenti consentono di mantenere la barra del menu sempre in primo piano */
+    position: sticky;
+    top: 0;
+}
+
+header #header-right .hd-right {
+    margin-left: 0.8em;
+
+}
+
+header #header-right button {
+    font-size: 12pt;
+    padding: 8px;
+    border-radius: 20px;
+    border-color: rgba(0,0,0,0.5);
+}
+
+/* definizione dello stile sull'hover del pulsante presente nell'header */
+header #header-right button:hover {
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    background-color: rgba(245, 245, 245, 0.4);
+}
+
+main .content {
+    width: 65%;
+    border-right: 1px solid rgba(0,0,0,0.1);
+    padding: 0 2em 0 5em;
+}
+
+main .content #content-header {
+    width: 100%;
+    height: 11vh;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+main .content #content-header ul {
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+}
+
+main .content #content-header ul li {
+    list-style: none;
+    margin-right: 1em;
+    padding-bottom: 0.5em;
+}
+
+main .content #content-header ul li a {
+    text-decoration: none;
+    color: grey;
+}
+
+/* gestione dell'evento focus sui link presenti nella parte superiore del main 
+cliccando sui link cambia il colore dello stesso e appare una sottolineatura*/
+main .content #content-header ul li a:focus {
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid rgba(0,0,0,1);
+    color: black;
+}
+
+main .content .post {
+    width: 100%;
+    display: flex;
+    margin-top: 2em;
+}
+
+main .content .post .post-content {
+    width: 70%;
+}
+
+main .content .post .post-content h2{
+    margin: 0;
+}
+
+main .content .post .post-content p {
+    margin: 0 0 1em 0;
+    position: relative;
+}
+
+main .content .post .post-img {
+    width: 30%;
+    background-image: url(./assets/img_3.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+main .content .post .post-content .info-post p span:last-child{
+    position: absolute;
+    right: 0;
+}
+
+main .content .post .post-content .info-post p span:last-child .fa-solid {
+    margin: 0 0.5em;
+}
+
+/* stile del simbolo di twitter */
+.fa-twitter {
+    color: rgb(0, 195, 255);
+    margin-right: 0.2em;
+}
+
+main aside {
+    width: 35%;
+    padding-top: 3em;
+    padding-left: 2em;
+    font-size: 18pt;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+main aside .aside-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+main aside section:first-child {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    text-align: center;
+    width: 70%;
+}
+
+main aside section:first-child button {
+    font-size: 15pt;
+    padding: 15px;
+    border-radius: 30px;
+    border-color: rgba(0,0,0,0.5);
+    margin: 0 auto 1em auto;
+    width: 58%;
+}
+
+/* stile applicato sull'hover del pulsante Connect to Twitter */
+main aside section:first-child button:hover {
+    border: 3px solid rgba(0,0,0,0.8);
+    color: green;
+    font-weight: 500;
+}
+
+main aside section:first-child a {
+    margin-bottom: 2em;
+    color: grey;
+}
+
+main aside section:nth-child(2) {
+    width: 50%;
+}
+
+main aside section:nth-child(2) #racc-btns{
+display: flex;
+flex-wrap: wrap;
+width: 100%;
+}
+
+main aside section:nth-child(2) #racc-btns .racc-btn {
+    background-color: rgba(128, 128, 128, 0.219);
+    font-size: 12pt;
+    padding: 10px;
+    margin: 0.4em 0.5em 0.4em 0;
+    border-color: rgba(0,0,0,0.5);
+    border-radius: 20px;
+}
+
+/* stile applicato sull'hover dei pulsanti presenti nella sezione Recomended topics */
+main aside section:nth-child(2) #racc-btns .racc-btn:hover {
+    background-color: rgba(0, 0, 0, 0.501);
+    color: whitesmoke;
+}
+
+main aside section:nth-child(3) .follower {
+    display: flex;
+    height: 7vh;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+main aside section:nth-child(3) .follower .author {
+    height: 100%;
+    text-align: left;
+    margin: 0 1.5em;
+    font-size: 16pt;
+}
+
+main aside section:nth-child(3) .follower .author h4{
+    margin: 0;
+}
+
+main aside section:nth-child(3) .follower button {
+    font-size: 13pt;
+    padding: 20px;
+    border-radius: 26px;
+    border-color: rgba(0,0,0,0.5);
+    background-color: white;
+}
+
+/* stile applicato sull'hover dei pulsanti Follow */
+main aside section:nth-child(3) .follower button:hover {
+    font-size: 15pt;
+    border-color: rgba(0,0,0,0.8);
+    font-weight: bold;
+}
+
+main aside section:last-child {
+    width: 70%;
+    /* le istruzioni seguenti consentono all'ultima sezione della barra laterale di rimanere fissa
+    quando il top raggiunge la soglia indicata*/
+    position: sticky;
+    top: 8.5vh;
+}
+
+main aside section:last-child .saved-post {
+    margin-bottom: 1em;
+}
+
+.post-title {
+    display: flex;
+    align-items: center;
+}
+
+main aside section:last-child .saved-post h3 {
+    margin: 0.5em 0;
+}
+
+main aside section:last-child .saved-post .info-post p {
+    font-size: 13pt;
+}
+
+.info-post p span {
+    margin-right: 0.5em;
+}
+
+main aside section:last-child a {
+    text-decoration: none;
+    color: green;
+}
+
+main aside section:last-child footer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: 1em 0;
+}
+
+main aside section:last-child footer a {
+    text-decoration: none;
+    margin-right: 0.5em;
+    font-size: 14pt;
+    color: grey;
+}
